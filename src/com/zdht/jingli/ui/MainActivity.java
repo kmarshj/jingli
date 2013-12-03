@@ -1,4 +1,6 @@
-package com.zdht.jingli;
+package com.zdht.jingli.ui;
+
+import com.zdht.jingli.R;
 
 import android.os.Bundle;
 import android.app.Activity;
