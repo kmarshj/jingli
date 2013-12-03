@@ -1,4 +1,4 @@
-package com.zdht.jingli.ui;
+package com.zdht.jingli.groups.ui;
 
 import com.zdht.jingli.R;
 
