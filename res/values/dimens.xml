@@ -1,7 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-
+    <!-- 公共数据 -->
+    <dimen name="public_title_height">48dp</dimen>
+    <dimen name="public_title_size">20sp</dimen>
+    
+    
+    <dimen name="title_margin_top">20dp</dimen>
+    <dimen name="title_margin_bottom">10dp</dimen>
+    <dimen name="title_margin_left">15dp</dimen>
+    <dimen name="table_lefttext_margin_left">10dp</dimen>
+    <dimen name="table_lefttext_width">110dp</dimen>
+    <dimen name="table_left_short_lenth">60dp</dimen>
+    
+	<dimen name="login_hint_top">20dp</dimen>
+	<dimen name="login_hint_padding">20dp</dimen>
+	
+    <dimen name="title_height">48dp</dimen>
+    
+    <dimen name="chat_item_height">49dp</dimen>
+    <dimen name="chat_avatar_size">46dp</dimen>
+    <dimen name="chat_nickname_marginleft">10dp</dimen>
+    <dimen name="chat_contentview_marginleft">5dp</dimen>
+    <dimen name="chat_contentview_margintop">2dp</dimen>
+    <dimen name="chat_nickname_textsize">12sp</dimen>
+    <!-- 活动与资讯列表 -->
+    <dimen name="activity_item_img_width">120dp</dimen>
+    <dimen name="activity_item_img_height">90dp</dimen>
+    <dimen name="activity_item_padding_horizontal">5dp</dimen>
+    <dimen name="activity_item_padding_vertical">10dp</dimen>
+    <dimen name="activity_item_content_left">10dp</dimen>
+    <dimen name="activity_item_host_top">10dp</dimen>
+    <dimen name="activity_news_radiogroup_padding">3dp</dimen>
+    <dimen name="activity_news_radiogroup_padding_top">5dp</dimen>
+    <dimen name="activity_news_title_padding">2dp</dimen>
+    <dimen name="activity_news_title_menu_padding">10dp</dimen>
+    <dimen name="activity_news_viewpager_margin">10dp</dimen>
+    <dimen name="activity_item_people_right">30dp</dimen>
+    <dimen name="activity_news_popup_item_size">18sp</dimen>
+    <dimen name="activity_news_popup_item_vertical">10dp</dimen>
+    <dimen name="activity_news_popup_item_horizontal">20dp</dimen>
+    
+    <!-- 通讯录 -->
+    <dimen name="address_search_padding_vertical">2dp</dimen>
+    <dimen name="address_search_padding_horizontal">15dp</dimen>
+    <dimen name="address_search_height">45dp</dimen>
+    
+    <dimen name="add_friend_search_horizontal">10dp</dimen>
+    <dimen name="add_friend_search_vertical">3dp</dimen>
 </resources>

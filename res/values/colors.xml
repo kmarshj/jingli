@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="login_text">#898989</color>
+    <color name="login_edit_hint">#AAAAAA</color>
+   	<color name="group_member_add">#FF0000</color>
+   	<!-- 活动和资讯列表字体颜色 -->
+   	<color name="activity_news_item_title">#424547</color>
+   	<color name="activity_news_item_content">#74787A</color>
+   	
+   	<color name="activity_news_item_normal">#E0383C41</color>
+   	<color name="activity_news_item_checked">#1EA580</color>
+</resources>

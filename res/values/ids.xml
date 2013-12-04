@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	<item type="id" name="viewTitle" />
+   	<item type="id" name="chatEditView" />
+   	<item type="id" name="single_chatEditView" />
+   	
+   	<!-- 活动及新闻列表页面 -->
+   	<item type="id" name="activity_news_title" />
+   	<item type="id" name="activity_news_radiobutton_activity" />
+   	<item type="id" name="activity_news_radiobutton_news" />
+   	<item type="id" name="activity_news_radiogroup" />
+	<item type="id" name="activity_news_title_menu" />
+	<item type="id" name="activity_news_viewpager" />
+	<item type="id" name="activity_news_popup_activity_radios" />
+	<item type="id" name="activity_news_popup_activity_all" />
+	<item type="id" name="activity_news_popup_activity_weekly" />
+	<item type="id" name="activity_news_popup_activity_month" />
+	<item type="id" name="activity_news_popup_activity_nmonth" />
+	<item type="id" name="activity_news_popup_activity_over" />
+	<item type="id" name="activity_news_popup_news_all" />
+	<item type="id" name="activity_news_popup_news_weekly" />
+	<item type="id" name="activity_news_popup_news_month" />
+	<item type="id" name="activity_news_popup_news_nmonth" />
+	<item type="id" name="activity_news_popup_news_over" />
+	
+	<item type="id" name="adapter_news_item_poster" />
+	<item type="id" name="adapter_news_item_title" />
+	<item type="id" name="adapter_news_item_content" />
+	<item type="id" name="adapter_news_item_time" />
+	
+</resources>
