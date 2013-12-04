@@ -3,6 +3,8 @@ package com.zdht.jingli.groups.parampool;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.zdht.jingli.groups.model.HPMessage;
+
 
 public class DBReadLastMessageParam {
 
@@ -15,7 +17,7 @@ public class DBReadLastMessageParam {
 	public boolean				mHasValue;
 	
 	public boolean				mSetMessage;
-//	public HPMessage			mMessageOut;
+	public HPMessage			mMessageOut;
 	
 	public Map<String,String> 	mMapColumnNameToValue = new HashMap<String, String>();
 	

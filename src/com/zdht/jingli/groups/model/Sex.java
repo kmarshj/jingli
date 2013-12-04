@@ -2,8 +2,9 @@ package com.zdht.jingli.groups.model;
 
 import java.io.Serializable;
 
-//import com.zdht.school.R;
-//import com.zdht.school.SCApplication;
+import com.zdht.jingli.R;
+import com.zdht.jingli.groups.SCApplication;
+
 
 
 public class Sex implements Serializable {
@@ -26,13 +27,13 @@ public class Sex implements Serializable {
 		}
 	}
 	
-//	public static Sex valueOf(String strValue){
-//		if(strValue.equals(SCApplication.getApplication().getString(R.string.male))){
-//			return MALE;
-//		}else{
-//			return FEMALE;
-//		}
-//	}
+	public static Sex valueOf(String strValue){
+		if(strValue.equals(SCApplication.getApplication().getString(R.string.male))){
+			return MALE;
+		}else{
+			return FEMALE;
+		}
+	}
 	
 	@Override
 	public boolean equals(Object o) {
@@ -54,17 +55,17 @@ public class Sex implements Serializable {
 		return mValue;
 	}
 	
-//	public String getStringValue(){
-//		if(this == MALE){
-//			return SCApplication.getApplication().getString(R.string.male);
-//		}else{
-//			return SCApplication.getApplication().getString(R.string.female);
-//		}
-//	}
+	public String getStringValue(){
+		if(this == MALE){
+			return SCApplication.getApplication().getString(R.string.male);
+		}else{
+			return SCApplication.getApplication().getString(R.string.female);
+		}
+	}
 
-//	@Override
-//	public String toString() {
-//		return getStringValue();
-//	}
+	@Override
+	public String toString() {
+		return getStringValue();
+	}
 	
 }

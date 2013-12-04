@@ -45,6 +45,7 @@ import com.zdht.jingli.groups.event.PostImageEvent;
 import com.zdht.jingli.groups.event.QuitAndAddActivityEvent;
 import com.zdht.jingli.groups.localinfo.LocalBaseInfoProtocol;
 import com.zdht.jingli.groups.localinfo.LocalInfoManager;
+import com.zdht.jingli.groups.utils.SchoolUtils;
 //import com.zdht.school.im.HPIMSystem;
 //import com.zdht.school.im.IMStatus;
 
@@ -272,7 +273,7 @@ public class SCApplication extends Application implements OnEventListener{
 	
 	private void saveLocalBaseInfo(LocalBaseInfoProtocol localBaseInfo){
 		Map<String, String> map = new HashMap<String, String>();
-		//SchoolUtils.buildLocalInfoSaveMap(map, localBaseInfo);
+		SchoolUtils.buildLocalInfoSaveMap(map, localBaseInfo);
 		LocalInfoManager.getInstance().save(map);
 	}
 	
