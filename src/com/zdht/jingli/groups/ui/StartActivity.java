@@ -71,7 +71,6 @@ public class StartActivity extends InstrumentedActivity {
 
 		@Override
 		protected String doInBackground(Void... params) {
-			// TODO Auto-generated method stub
 			long start = System.currentTimeMillis();
 			HttpURLConnection connection = null;
 			String result = null;
@@ -107,7 +106,6 @@ public class StartActivity extends InstrumentedActivity {
 
 		@Override
 		protected void onPostExecute(String result) {
-			// TODO Auto-generated method stub
 			super.onPostExecute(result);
 			if (StartActivity.this.isFinishing() || TextUtils.isEmpty(result)) {
 				go();
@@ -128,7 +126,6 @@ public class StartActivity extends InstrumentedActivity {
 					go();
 				}
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				go();
 			} catch (NameNotFoundException e) {
