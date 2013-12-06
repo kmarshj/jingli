@@ -25,9 +25,6 @@ import cn.jpush.android.api.InstrumentedActivity;
 import com.zdht.jingli.R;
 import com.zdht.jingli.groups.SCApplication;
 import com.zdht.jingli.groups.localinfo.LocalInfoManager;
-/*import com.zdht.school.SCApplication;
-import com.zdht.school.localinfo.LocalInfoManager;
-import com.zdht.school.model.Version;*/
 import com.zdht.jingli.groups.model.Version;
 
 public class StartActivity extends InstrumentedActivity {
@@ -41,7 +38,7 @@ public class StartActivity extends InstrumentedActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.start);
-		startImage = (ImageView)findViewById(R.id.start_image);
+//		startImage = (ImageView)findViewById(R.id.start_image);
 		if(isXNHKZXXY) {
 			//startImage.setBackgroundResource(R.anim.image_show);
 			final AnimationDrawable mAnimationDrawable = (AnimationDrawable)startImage.getBackground();
@@ -64,9 +61,9 @@ public class StartActivity extends InstrumentedActivity {
 				//SCApplication.print( "logo file 不存在");
 			}
 		}*/
-		new UpdateTask().execute();
+		go();
+		//new UpdateTask().execute();
 	}
-
 	class UpdateTask extends AsyncTask<Void, Void, String> {
 
 		@Override
@@ -191,10 +188,10 @@ public class StartActivity extends InstrumentedActivity {
 			}
 		}
 		if (LocalInfoManager.getInstance().isLogined()) {
-			((SCApplication)getApplication()).onUserLogined();
-			//MainActivity.launch(StartActivity.this);
+			//((SCApplication)getApplication()).onUserLogined();
+			MainActivity.launch(StartActivity.this);
 		} else {
-			//LoginActivity.launch(StartActivity.this);
+			LoginActivity.launch(StartActivity.this);
 		}
 		finish();
 	}

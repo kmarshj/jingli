@@ -103,7 +103,7 @@
         <RelativeLayout
             android:id="@+id/rl_register"
             android:layout_width="120dip"
-            android:layout_height="65dip"
+            android:layout_height="50dip"
             android:layout_alignParentLeft="true"
             android:background="@drawable/btn_register_xml" >
 
@@ -125,13 +125,13 @@
                 android:layout_toRightOf="@+id/iv_register"
                 android:text="@string/register"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_login"
             android:layout_width="120dip"
-            android:layout_height="65dip"
+            android:layout_height="50dip"
             android:layout_alignParentRight="true"
             android:background="@drawable/btn_login_xml" >
 
@@ -153,7 +153,7 @@
                 android:layout_toLeftOf="@+id/iv_login"
                 android:text="@string/login"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </RelativeLayout>
     </RelativeLayout>
 

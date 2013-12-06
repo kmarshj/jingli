@@ -177,12 +177,12 @@ public class SCApplication extends Application implements OnEventListener{
 
 	public void onUserLogined(){
 		final String strUserId = LocalInfoManager.getInstance().getmLocalInfo().getStudentId();
-//		Intent intent = new Intent(this, HPIMSystem.class);
-//		startService(intent);
+		Intent intent = new Intent(this, HPIMSystem.class);
+		startService(intent);
 		
 		HPUserDatabaseManager.getInstance().onInit(this, strUserId);
-//		HPUserFilePathManager.getInstance().onInit(this, strUserId);
-//		RecentChatManager.getInstance().onInit();
+		HPUserFilePathManager.getInstance().onInit(this, strUserId);
+		RecentChatManager.getInstance().onInit();
 		HPDatabaseManager.getInstance().onInit(this);
 		// 读取jpush标签信息并设置
 		String tagsStr = LocalInfoManager.getInstance().getmLocalInfo().getJTag();

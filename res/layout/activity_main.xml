@@ -1,13 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity" >
-
-    <TextView
-        android:id="@+id/tv_main"
-        android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    >
+    <!-- 底部标签区域 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="3dp"
+        android:background="@drawable/img_bg"
+        android:gravity="center_vertical"
+        android:id="@+id/bottommainPage"
+        >
+		<GridView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:numColumns="5"
+		    android:verticalSpacing="0dip"
+		    android:id="@+id/tabGridView"
+		    />
+    </RelativeLayout>
+    
+    <!-- 底部上面容器 -->
+    <LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent"
+		android:layout_alignParentTop="true"
+		android:layout_above="@id/bottommainPage"
+		android:id="@+id/pageContainer"
+		android:orientation="vertical"
+		/>		
 </RelativeLayout>

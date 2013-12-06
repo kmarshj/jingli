@@ -69,6 +69,7 @@ public class LoginActivity extends SCBaseActivity implements OnClickListener,
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
 		et_username = (EditText)findViewById(R.id.et_username);
 		et_username.setText(SharedPreferenceManager
         		.getSharedPreferences(this)
