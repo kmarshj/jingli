@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+    <RelativeLayout 
+	    android:id="@id/activity_news_title"
+	    android:layout_width="fill_parent"
+	    android:layout_height="@dimen/public_title_height"
+	    android:padding="@dimen/activity_news_title_padding"
+	    android:background="@drawable/public_title_bg">
+		
+		<RadioGroup android:id="@id/activity_news_radiogroup" 
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_centerInParent="true"
+		    android:paddingTop="@dimen/activity_news_radiogroup_padding_top" 
+		    android:paddingBottom="@dimen/activity_news_radiogroup_padding" >
+		    <RadioButton android:id="@id/activity_news_radiobutton_activity"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:button="@null"
+		        android:checked="true"
+		        android:background="@drawable/btn_activity_xml" />
+		    
+		    <RadioButton android:id="@id/activity_news_radiobutton_news"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:button="@null"
+		        android:background="@drawable/btn_news_xml" />
+		</RadioGroup>
+		
+<!-- 		<ImageView android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/activity_news_title_check_bg_left"
+		    android:layout_toLeftOf="@id/activity_news_radiogroup" />
+		
+		<ImageView android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/activity_news_title_check_bg_r"
+		    android:layout_toRightOf="@id/activity_news_radiogroup" /> -->
+		
+		<ImageView android:id="@id/activity_news_title_menu"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:paddingLeft="@dimen/activity_news_title_menu_padding"
+		    android:paddingRight="@dimen/activity_news_title_menu_padding"
+		    android:src="@drawable/btn_saixuan_xml"
+		    android:layout_alignParentRight="true" />
+	</RelativeLayout>
+
+	<android.support.v4.view.ViewPager
+	    android:id="@id/activity_news_viewpager"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	     />
+</LinearLayout>

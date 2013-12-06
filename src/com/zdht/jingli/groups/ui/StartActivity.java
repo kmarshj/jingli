@@ -61,7 +61,8 @@ public class StartActivity extends InstrumentedActivity {
 				//SCApplication.print( "logo file 不存在");
 			}
 		}*/
-		go();
+		MainActivity.launch(StartActivity.this);
+		//go();
 		//new UpdateTask().execute();
 	}
 	class UpdateTask extends AsyncTask<Void, Void, String> {

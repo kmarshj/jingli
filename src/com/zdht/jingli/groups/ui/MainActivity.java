@@ -92,7 +92,7 @@ public class MainActivity extends ActivityGroup implements
 		bottomMainPage.setSelector(new ColorDrawable(Color.TRANSPARENT));
 
 		/**
-		 * 获取屏幕宽度并平分4份
+		 * 获取屏幕宽度并平分5份
 		 */
 		int width = getWindowManager().getDefaultDisplay().getWidth() / 5;
 
