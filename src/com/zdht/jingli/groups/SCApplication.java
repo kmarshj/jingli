@@ -43,11 +43,11 @@ import com.zdht.jingli.groups.event.PostAvatarEvent;
 import com.zdht.jingli.groups.event.PostFindPdEvent;
 import com.zdht.jingli.groups.event.PostImageEvent;
 import com.zdht.jingli.groups.event.QuitAndAddActivityEvent;
+import com.zdht.jingli.groups.im.HPIMSystem;
+import com.zdht.jingli.groups.im.IMStatus;
 import com.zdht.jingli.groups.localinfo.LocalBaseInfoProtocol;
 import com.zdht.jingli.groups.localinfo.LocalInfoManager;
 import com.zdht.jingli.groups.utils.SchoolUtils;
-//import com.zdht.school.im.HPIMSystem;
-//import com.zdht.school.im.IMStatus;
 
 public class SCApplication extends Application implements OnEventListener{
 	public static final String TAG = "scapplication";
@@ -282,18 +282,18 @@ public class SCApplication extends Application implements OnEventListener{
 	}
 	
 	protected void userLoginOut(){
-//		Intent intent = new Intent(this, HPIMSystem.class);
-//		stopService(intent);
-//		LocalInfoManager.getInstance().onLoginOut();
-//		HPUserDatabaseManager.getInstance().onDestory();
-//		RecentChatManager.getInstance().onDestroy();
-//		StatusBarManager.getInstance().clearStatusBar();
+		Intent intent = new Intent(this, HPIMSystem.class);
+		stopService(intent);
+		LocalInfoManager.getInstance().onLoginOut();
+		HPUserDatabaseManager.getInstance().onDestory();
+		RecentChatManager.getInstance().onDestroy();
+		StatusBarManager.getInstance().clearStatusBar();
 	}
 	
-//	public static boolean isIMConnectionSuccess(){
-//		IMStatus status = new IMStatus();
-//		AndroidEventManager.getInstance().runEvent(EventCode.IM_StatusQuery,status);
-//		return status.mIsLogined;
-//	}
+	public static boolean isIMConnectionSuccess(){
+		IMStatus status = new IMStatus();
+		AndroidEventManager.getInstance().runEvent(EventCode.IM_StatusQuery,status);
+		return status.mIsLogined;
+	}
 	
 }

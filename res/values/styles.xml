@@ -1,20 +1,55 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+    <style name="AppManagerTab" parent="android:style/Theme.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+    <style name="CommonTextShadow">
+    	<item name="android:shadowDy">2</item>
+    	<item name="android:shadowRadius">1</item>
     </style>
 
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <style name="UnreadMessageCount">
+    	<item name="android:textSize">14sp</item>
+  		<item name="android:textColor">#ffffffff</item>
+  		<item name="android:textStyle">bold</item>
+  		<item name="android:gravity">center</item>
+  		<item name="android:singleLine">true</item>
+  		<item name="android:background">@drawable/background_unreadmessagecount</item>
     </style>
-
+    
+    <style name="activity_news_popup_radiobutton">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/activity_news_popup_item_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingTop">@dimen/activity_news_popup_item_vertical</item>
+        <item name="android:paddingBottom">@dimen/activity_news_popup_item_vertical</item>
+        <item name="android:paddingLeft">@dimen/activity_news_popup_item_horizontal</item>
+    </style>
+    
+    <style name="activity_main_menu">
+    	<item name="android:layout_width">fill_parent</item>
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:layout_weight">1</item>
+    </style>
+    
+    <style name="public_title_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/public_title_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    
+    <style name="address_radiobutton">
+        <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/address_radiobutton_bg</item>
+    </style>
 </resources>

@@ -102,6 +102,8 @@ public class EventCode{
 	
 	public static final int HP_LoginActivityCreated				= CODE_INC++;
 	
+	public static final int HP_RegisterActivityCreated		    = CODE_INC++;
+	
 	public static final int HP_RecentChatChanged				= CODE_INC++;
 	
 	public static final int HP_LoginGetOrChangeInfoSuccess      = CODE_INC++;
