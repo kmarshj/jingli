@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zdht.jingli.groups"
+    package="com.zdht.jingli"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -16,7 +16,7 @@
         android:theme="@android:style/Theme.NoTitleBar"
         >
         <activity
-            android:name=".ui.StartActivity"
+            android:name=".groups.ui.StartActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,17 +25,17 @@
             </intent-filter>
         </activity>
           <activity
-            android:name=".ui.LoginActivity"
+            android:name=".groups.ui.LoginActivity"
             android:screenOrientation="portrait" >
         </activity>
       
          <activity
-            android:name=".ui.MainActivity"
+            android:name=".groups.ui.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
               
         <activity
-            android:name=".ui.RegisterActivity"
+            android:name=".groups.ui.RegisterActivity"
             android:screenOrientation="portrait" >
         </activity>
     </application>

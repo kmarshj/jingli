@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/img_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="51dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:background="@drawable/img_et_bg"
+            android:drawableLeft="@drawable/img_username"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dip"
+            android:hint="@string/login_username"
+            android:inputType="text"
+            android:paddingLeft="20dip"
+            android:textColor="#38414e"
+            android:textSize="18sp" >
+
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_userpassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip" >
+
+        <EditText
+            android:id="@+id/et_userpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/img_et_bg"
+            android:drawableLeft="@drawable/img_userpassword"
+            android:drawablePadding="10dip"
+            android:gravity="center_vertical"
+            android:hint="@string/login_userpassword"
+            android:inputType="textPassword"
+            android:paddingLeft="20dip"
+            android:singleLine="true"
+            android:textColor="#38414e"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_setpassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip" >
+
+        <CheckBox
+            android:id="@+id/cb_savepsd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dip"
+            android:button="@drawable/cb_savepsd_xml"
+            android:checked="true"
+            android:paddingLeft="22dip"
+            android:singleLine="true"
+            android:text="@string/savepsd_password"
+            android:textColor="#38414e"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_forgetpsd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:text="@string/forgot_password"
+            android:textColor="#38414e"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="30dip" >
+
+        <RelativeLayout
+            android:id="@+id/rl_register"
+            android:layout_width="120dip"
+            android:layout_height="65dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_register_xml" >
+
+            <ImageView
+                android:id="@+id/iv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/img_register" />
+
+            <TextView
+                android:id="@+id/bt_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@+id/iv_register"
+                android:text="@string/register"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_login"
+            android:layout_width="120dip"
+            android:layout_height="65dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_login_xml" >
+
+            <ImageView
+                android:id="@+id/iv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/img_login" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:layout_toLeftOf="@+id/iv_login"
+                android:text="@string/login"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

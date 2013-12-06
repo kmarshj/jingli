@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/img_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="30dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+         >
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:background="@drawable/img_et_bg"
+            android:drawableLeft="@drawable/img_phone"
+            android:drawablePadding="10dip"
+            android:hint="@string/register_phone"
+            android:inputType="text"
+            android:paddingLeft="20dip"
+            android:textColor="#38414e" >
+
+        </EditText>
+    </RelativeLayout>
+        <RelativeLayout
+        android:id="@+id/rl_nicheng"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip"
+        >
+
+        <EditText
+            android:id="@+id/et_nicheng"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:background="@drawable/img_et_bg"
+            android:drawableLeft="@drawable/img_nicheng"
+            android:drawablePadding="10dip"
+            android:hint="@string/register_nicheng"
+            android:inputType="text"
+            android:paddingLeft="20dip"
+            android:textColor="#38414e" >
+
+        </EditText>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_userpassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip" >
+
+        <EditText
+            android:id="@+id/et_registerpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/img_et_bg"
+            android:drawableLeft="@drawable/img_userpassword"
+            android:drawablePadding="10dip"
+            android:hint="@string/register_password"
+            android:inputType="textPassword"
+            android:paddingLeft="20dip"
+            android:singleLine="true"
+            android:textColor="#38414e" />
+    </RelativeLayout>
+
+        <RelativeLayout
+        android:id="@+id/rl_userpassword_second"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip" >
+
+        <EditText
+            android:id="@+id/et_registerpassword_second"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/img_et_bg"
+            android:drawableLeft="@drawable/img_userpassword"
+            android:drawablePadding="10dip"
+            android:hint="@string/register_userpassword_second"
+            android:inputType="textPassword"
+            android:paddingLeft="20dip"
+            android:singleLine="true"
+            android:textColor="#38414e" />
+    </RelativeLayout>
+  
+
+
+        <RelativeLayout
+            android:id="@+id/rl_complete"
+            android:layout_width="fill_parent"
+            android:layout_height="65dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/btn_login_xml" >
+
+            <TextView
+                android:id="@+id/tv_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="完成"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+            
+             <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_complete"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/img_login" />
+        </RelativeLayout>
+
+</LinearLayout>
