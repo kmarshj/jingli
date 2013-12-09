@@ -76,6 +76,11 @@
             android:name=".groups.ui.SCBaseActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
+        <activity
+            android:name=".groups.ui.SetActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>
