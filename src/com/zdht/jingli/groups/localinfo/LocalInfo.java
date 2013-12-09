@@ -9,6 +9,8 @@ public class LocalInfo implements LocalBaseInfoProtocol{
 	
 	private final static String DEF_VALUE = "";
 	
+	private final static String DEF_USER_ID = "28924";
+	
 	
 	protected String mUserId       = "";
 	
@@ -37,7 +39,7 @@ public class LocalInfo implements LocalBaseInfoProtocol{
 	
 	public void set(SharedPreferences sp){
 		
-		mUserId = sp.getString(SharedPreferenceManager.KEY_USERID, DEF_VALUE);
+		mUserId = sp.getString(SharedPreferenceManager.KEY_USERID, DEF_USER_ID);
 		
 		mStudentId = sp.getString(SharedPreferenceManager.KEY_STUDENTID, DEF_VALUE);
 		

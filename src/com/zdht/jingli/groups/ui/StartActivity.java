@@ -31,16 +31,13 @@ public class StartActivity extends InstrumentedActivity {
 
 	private ImageView startImage;
 	private long time = 0;
-	/** 是否西南航空 */
 	private boolean isXNHKZXXY = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.start);
-//		startImage = (ImageView)findViewById(R.id.start_image);
 		if(isXNHKZXXY) {
-			//startImage.setBackgroundResource(R.anim.image_show);
 			final AnimationDrawable mAnimationDrawable = (AnimationDrawable)startImage.getBackground();
 			startImage.post(new Runnable() {
 				@Override
@@ -61,10 +58,11 @@ public class StartActivity extends InstrumentedActivity {
 				//SCApplication.print( "logo file 不存在");
 			}
 		}*/
-		MainActivity.launch(StartActivity.this);
+//		MainActivity.launch(StartActivity.this);
 		//go();
-		//new UpdateTask().execute();
+		new UpdateTask().execute();
 	}
+	
 	class UpdateTask extends AsyncTask<Void, Void, String> {
 
 		@Override
@@ -188,12 +186,13 @@ public class StartActivity extends InstrumentedActivity {
 				}
 			}
 		}
-		if (LocalInfoManager.getInstance().isLogined()) {
-			//((SCApplication)getApplication()).onUserLogined();
-			MainActivity.launch(StartActivity.this);
-		} else {
-			LoginActivity.launch(StartActivity.this);
-		}
+//		if (LocalInfoManager.getInstance().isLogined()) {
+//			//((SCApplication)getApplication()).onUserLogined();
+//			MainActivity.launch(StartActivity.this);
+//		} else {
+//			LoginActivity.launch(StartActivity.this);
+//		}
+		MainActivity.launch(StartActivity.this);
 		finish();
 	}
 }
