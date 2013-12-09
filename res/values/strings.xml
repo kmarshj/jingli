@@ -255,5 +255,5 @@
     <string name="add_friend_group_text_group">添加圈子</string>
     <string name="add_friend_intro">直接输入姓名/学号等关键字进行搜索</string>
     <string name="search_user_zero">没有查询到对应的用户</string>
-
+<string name="shop_info">店铺信息</string>
 </resources>

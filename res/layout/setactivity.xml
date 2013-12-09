@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#000000"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/vPersonal_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                     >
+
+                    <ImageView
+                        android:id="@+id/tubiao"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/shopin"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMy_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tubiao"
+                        android:layout_centerVertical="true"
+                        android:text="@string/shop_info"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#666666"
+                        android:textSize="18sp" />
+                    
+                   
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vManage_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#C7C7C7" />
+
+                   <ImageView
+                        android:id="@+id/tubiaom"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/activityms"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMy_names"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tubiaom"
+                        android:layout_centerVertical="true"
+                        android:text="@string/manage_activities"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#666666"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vActivity_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                         android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#C7C7C7" />
+
+                   <ImageView
+                        android:id="@+id/tubiaoms"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/activityre"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMy_names"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tubiaoms"
+                        android:layout_centerVertical="true"
+                        android:text="@string/activity_notification"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#666666"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/vFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/tubiaomss"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/yijianfankui"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMy_names"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tubiaomss"
+                        android:layout_centerVertical="true"
+                        android:text="@string/feedback"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#666666"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                     android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                    android:background="#C7C7C7" />
+
+                <RelativeLayout
+                    android:id="@+id/vAbout_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                     >
+
+                    <ImageView
+                        android:id="@+id/atubiaoms"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/aboutus"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMy_names"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/atubiaoms"
+                        android:layout_centerVertical="true"
+                        android:text="@string/about_us"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#666666"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow" />
+                
+                </RelativeLayout>
+            </LinearLayout>
+
+            
+
+
+            <Button
+                android:id="@+id/btnLogin_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/login_out"
+                
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
