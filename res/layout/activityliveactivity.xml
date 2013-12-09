@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/vInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_input"
+        android:orientation="horizontal" >
+	    <com.zdht.view.ActivityChatEditView
+	        android:id="@+id/activity_chat_editview"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.zdht.view.PullToRefreshListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/vInput"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="10dp" />
+
+    <Button
+        android:id="@+id/btnSend_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:background="@drawable/btn_send_live" />
+
+    <View
+        android:id="@+id/viewClick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aa000000"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/vMore_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSend_live"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnPhotograph"
+            android:layout_width="65dp"
+            android:layout_height="94dp"
+            android:background="@drawable/btn_photograph" />
+        
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnAlbums"
+            android:layout_width="65dp"
+            android:layout_height="94dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_albums" />
+        
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnText"
+            android:layout_width="65dp"
+            android:layout_height="94dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_text" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

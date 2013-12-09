@@ -275,7 +275,7 @@ public class LoginActivity extends SCBaseActivity implements OnClickListener,
 		if(getUserInfoEvent.isRequestSuccess()){
 			onLoginSuccessGetUserInfo(getUserInfoEvent);
 			AndroidEventManager.getInstance().postEvent(EventCode.HP_LoginGetOrChangeInfoSuccess, 0);
-			//MainActivity.launch(this);
+			MainActivity.launch(this);
 			finish();
 		}else {
 			mToastManager.show(R.string.get_user_info_failed);

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title" />
+    
+	<ImageView
+        android:id="@+id/ivGroup_avatar"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/app_name" 
+        android:background="@drawable/avatar"/>
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/content_frame"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="@string/name"
+            android:textColor="#666666"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etGroup_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="#00000000"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="#0A0A0A" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/content_frame"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/group_remark"
+            android:textColor="#666666"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etGroup_remark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:background="#00000000"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:singleLine="true"
+            android:textColor="#0A0A0A" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/content_frame"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/explanation"
+            android:textColor="#666666"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etGroup_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:background="#00000000"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:singleLine="true"
+            android:textColor="#0A0A0A" />
+    </LinearLayout>
+    
+	<TextView
+        android:id="@+id/create_group_member"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:background="@drawable/content_frame"
+        android:drawableRight="@drawable/campusconsulting_list_arrow"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+</LinearLayout>

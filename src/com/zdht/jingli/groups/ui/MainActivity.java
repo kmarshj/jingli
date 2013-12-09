@@ -169,10 +169,10 @@ public class MainActivity extends ActivityGroup implements
 			break;
 		case 3:
 			if(views[3] == null) {
-//			intents = new Intent(context,
-//					MarketPersonCenterActivity.class);
-//			pageView = getLocalActivityManager().startActivity("personcenter",
-//					intents);
+			intents = new Intent(context,
+					AddressActivity.class);
+			pageView = getLocalActivityManager().startActivity("address",
+					intents);
 			}
 			break;
 		case 4:

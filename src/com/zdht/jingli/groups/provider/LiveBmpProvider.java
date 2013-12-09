@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import com.zdht.core.Event;
 import com.zdht.jingli.groups.AndroidEventManager;
