@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:paddingTop="@dimen/activity_item_padding_horizontal"
+    android:paddingBottom="@dimen/activity_item_padding_horizontal"
+    android:paddingLeft="@dimen/activity_item_padding_vertical"
+    android:paddingRight="@dimen/activity_item_padding_vertical"
+    android:orientation="horizontal" >
+	<!-- 活动图片 -->
+    <ImageView
+        android:id="@+id/ivActivity_poster"
+        android:layout_width="@dimen/activity_item_img_width"
+        android:layout_height="@dimen/activity_item_img_height"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ivActivity_poster"
+        android:layout_marginLeft="@dimen/activity_item_content_left"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvActivity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+			android:maxLines="2"
+            android:textColor="@color/activity_news_item_title"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvActivity_host"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_item_host_top"
+            android:textColor="@color/activity_news_item_content"
+            android:textSize="12sp" 
+            android:ellipsize="end"
+            android:maxLines="1"/>
+		<LinearLayout android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+	        <TextView
+	            android:id="@+id/activity_item_time"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:textColor="@color/activity_news_item_content"
+	            android:textSize="12sp" />
+	        
+		    <TextView
+	            android:id="@+id/activity_item_people"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:textColor="@color/activity_news_item_content"
+	            android:textSize="12sp" />
+		    
+		    <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0"
+	            android:text="@string/activity_item_people_end"
+	            android:textColor="@color/activity_news_item_content"
+	            android:layout_marginRight="@dimen/activity_item_people_right"
+	            android:textSize="12sp" />
+		    
+		</LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+<ImageView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:background="@drawable/activity_news_listview_divider" />
+</LinearLayout>

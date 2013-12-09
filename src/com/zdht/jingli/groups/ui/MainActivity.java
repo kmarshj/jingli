@@ -143,7 +143,7 @@ public class MainActivity extends ActivityGroup implements
 		 */
 		case 0:
 			intents = new Intent(context,
-					LoginActivity.class);
+					ActivityAndNewsActivity.class);
 			pageView = getLocalActivityManager().startActivity("homepage",
 					intents);
 			break;

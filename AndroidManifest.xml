@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,34 +18,44 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:name=".groups.SCApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:theme="@android:style/Theme.NoTitleBar"
         android:label="@string/app_name"
-        >
+        android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:name=".groups.ui.StartActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-          <activity
+        <activity
             android:name=".groups.ui.LoginActivity"
             android:screenOrientation="portrait" >
         </activity>
-      
-         <activity
+        <activity
             android:name=".groups.ui.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
-              
+        <activity
+            android:name=".groups.ui.ActivityAndNewsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.NewBaseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.PersonalInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
         <activity
             android:name=".groups.ui.RegisterActivity"
             android:screenOrientation="portrait" >
@@ -52,7 +63,7 @@
         <activity
             android:name=".groups.ui.SCBaseActivity"
             android:screenOrientation="portrait" >
-            </activity>
+        </activity>
     </application>
 
 </manifest>
