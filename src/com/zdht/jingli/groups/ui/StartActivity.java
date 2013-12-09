@@ -109,6 +109,7 @@ public class StartActivity extends InstrumentedActivity {
 			}
 			try {
 				JSONObject json = new JSONObject(result);
+				json = json.getJSONObject("jinli");
 				Version mVersion = new Version();
 				mVersion.setVersion(json.getInt("version"));
 				mVersion.setUrl(json.getString("url"));
@@ -116,7 +117,7 @@ public class StartActivity extends InstrumentedActivity {
 
 				int versionCode = getPackageManager().getPackageInfo(
 						getPackageName(), 0).versionCode;
-				if (versionCode < mVersion.getVersion()) {
+				if (versionCode < mVersion.getVersion() && !TextUtils.isEmpty(mVersion.getUrl())) {
 					showUpdataDialog(mVersion);
 				} else {
 					go();

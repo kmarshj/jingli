@@ -3,7 +3,7 @@ package com.zdht.jingli.groups;
 public class URLUtils {
 
 	
-	public final static String KEY				= "schoolApp"; 
+	public final static String KEY				= "jinliApp"; 
 	
 	private final static String COMMON_URL      = "http://180.96.23.114:3000/"; 
 	

@@ -1,10 +1,13 @@
 package com.zdht.jingli.groups.ui;
 
+import com.zdht.jingli.R;
+import com.zdht.jingli.groups.adapter.MainTabAdapter;
+
 import android.app.Activity;
 import android.app.ActivityGroup;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
+import android.graphics.Color; 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +18,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.LinearLayout;
-
-import com.zdht.jingli.R;
-import com.zdht.jingli.groups.adapter.MainTabAdapter;
 
 /**
  * <主界面>
@@ -46,8 +46,6 @@ public class MainActivity extends ActivityGroup implements
 	 */
 	private Intent intents;
 	private Window pageView = null;
-	
-	private View[] views = new View[5];
 
 	/**
 	 * 初始标签图片的资源ID
@@ -144,53 +142,45 @@ public class MainActivity extends ActivityGroup implements
 		 * 获取子页面View
 		 */
 		case 0:
-			if(views[0] == null) {
-				intents = new Intent(context,
-						ActivityAndNewsActivity.class);
-				views[0] = getLocalActivityManager().startActivity("news",
-						intents).getDecorView();
-			}
+			intents = new Intent(context,
+					ActivityAndNewsActivity.class);
+			pageView = getLocalActivityManager().startActivity("news",
+					intents);
 			break;
 		case 1:
-			if(views[1] == null) {
-				intents = new Intent(context,
-						ChatListActivity.class);
-				views[1] = getLocalActivityManager().startActivity("chat",
-						intents).getDecorView();
-			}
+			intents = new Intent(context,
+					ChatListActivity.class);
+			pageView = getLocalActivityManager().startActivity("chat",
+					intents);
 			break;
 		case 2:
-			if(views[2] == null) {
+		
 //				intents = new Intent(context,
 //						ShoppingCartActivity.class);
-//				views[2] = getLocalActivityManager().startActivity(
-//						"shoppingcar", intents).getDecorView();
-			}
+//				pageView = getLocalActivityManager().startActivity(
+//						"shoppingcar", intents);
+			
 			break;
 		case 3:
-			if(views[3] == null) {
 //			intents = new Intent(context,
 //					MarketPersonCenterActivity.class);
 //			pageView = getLocalActivityManager().startActivity("personcenter",
 //					intents);
-			}
 			break;
 		case 4:
-			if(views[4] == null) {
-				intents = new Intent(context,
-						SetActivity.class);
-				views[4] = getLocalActivityManager().startActivity("set",
-						intents).getDecorView();
-			}
+//			intents = new Intent(context,
+//					MarketPersonCenterActivity.class);
+//			pageView = getLocalActivityManager().startActivity("personcenter",
+//					intents);
 			break;
 		default:
 			break;
 		}
-//		intents.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+		intents.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		/**
 		 * 装载子页面View到LinearLayout容器里面
 		 */
-		pageContainer.addView(views[id],
+		pageContainer.addView(pageView.getDecorView(),
 				LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
 	}
 
