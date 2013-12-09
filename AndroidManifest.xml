@@ -49,6 +49,18 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name=".groups.ui.ChatActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.ChatListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.SingleChatActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name=".groups.ui.NewBaseActivity"
             android:screenOrientation="portrait" >
         </activity>

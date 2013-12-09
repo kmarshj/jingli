@@ -144,14 +144,14 @@ public class MainActivity extends ActivityGroup implements
 		case 0:
 			intents = new Intent(context,
 					ActivityAndNewsActivity.class);
-			pageView = getLocalActivityManager().startActivity("homepage",
+			pageView = getLocalActivityManager().startActivity("news",
 					intents);
 			break;
 		case 1:
-//			intents = new Intent(context,
-//					MallSearchActivity.class);
-//			pageView = getLocalActivityManager().startActivity("myself",
-//					intents);
+			intents = new Intent(context,
+					ChatListActivity.class);
+			pageView = getLocalActivityManager().startActivity("chat",
+					intents);
 			break;
 		case 2:
 		
