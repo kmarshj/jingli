@@ -352,7 +352,7 @@ public class ActivityAndNewsActivity extends NewBaseActivity implements OnChecke
 	private void getNews(int page, boolean isLoadMore) {
 		newsPage = page;
 		mIsLoadMoreNews = isLoadMore;
-		String schoolCode = LocalInfoManager.getInstance().getSchoolCode().toLowerCase();
+		String schoolCode = LocalInfoManager.getInstance().getmLocalInfo().getSchoolCode().toLowerCase();
 		AndroidEventManager.getInstance().postEvent(EventCode.HTTPGET_GetNews, 0,
 				String.format(URLUtils.URL_GetNews, schoolCode, page));
 	}
