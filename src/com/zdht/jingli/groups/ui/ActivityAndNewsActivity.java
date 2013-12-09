@@ -43,7 +43,7 @@ import com.zdht.view.PulldownableListView.OnPullDownListener;
 
 /**
  * 活动与资讯页面
- * @author think
+ * @author luchengsong
  *
  */
 public class ActivityAndNewsActivity extends NewBaseActivity implements OnCheckedChangeListener,
