@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/chat_item_height"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/chat_item_height" >
+
+        <com.zdht.view.RoundCornerImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/chat_avatar_size"
+            android:layout_height="@dimen/chat_avatar_size"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp" />
+
+        <LinearLayout
+            android:id="@+id/viewInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/chat_nickname_marginleft"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@id/ivAvatar"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvNickname"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="0px"
+                android:singleLine="true"
+                android:textColor="#ff000000"
+                android:textSize="@dimen/chat_nickname_textsize" />
+        </LinearLayout>
+        
+        <FrameLayout
+            android:id="@+id/viewContent"
+            android:layout_width="wrap_content"
+         	android:layout_height="wrap_content"
+            android:layout_below="@id/viewInfo"
+            android:layout_marginLeft="@dimen/chat_contentview_marginleft"
+            android:layout_marginTop="@dimen/chat_contentview_margintop"
+            android:layout_toRightOf="@id/ivAvatar"/>
+
+        <ImageView
+            android:id="@+id/ivWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/viewContent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/msg_wrong" />
+    </RelativeLayout>
+
+    <include layout="@layout/message_divider" />
+
+</LinearLayout>

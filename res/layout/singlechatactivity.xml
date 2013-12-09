@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.zdht.view.HPChatEditView
+        android:id="@+id/chatEditView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <com.zdht.view.HPChatListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/chatEditView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/title_height"
+        android:background="#FFFFFF" />
+
+    <include layout="@layout/title" />
+
+</RelativeLayout>
