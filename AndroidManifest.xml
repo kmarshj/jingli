@@ -145,10 +145,6 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".groups.ui.ShopsActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name=".groups.ui.SetActivity"
             android:screenOrientation="portrait" >
         </activity>
