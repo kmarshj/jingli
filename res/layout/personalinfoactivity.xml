@@ -103,7 +103,7 @@
                                 android:layout_marginLeft="12dp"
                                 android:src="@drawable/telphone" />
 
-                            <TextView
+                           <TextView
                                 android:id="@+id/tvMy_phone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
