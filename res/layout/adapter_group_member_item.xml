@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="61dp"
+    android:minHeight="61dp"
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:layout_marginLeft="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:layout_marginRight="25dp"
+        />
+    
+    <RelativeLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0" >
+        <LinearLayout android:id="@+id/group_member_item_friend" 
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical" > 
+		    <ImageView android:id="@+id/ivChat"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/ic_chat"
+		        android:contentDescription="@string/app_name" />	
+		    
+		    <ImageView android:id="@+id/ivPhone"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/ic_phone"
+		        android:contentDescription="@string/app_name" />	
+	    </LinearLayout>
+	    
+        <TextView android:id="@+id/group_member_item_add" 
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/add_add"
+            android:textSize="13sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/group_member_add"
+            android:visibility="gone" />
+        
+        <Button android:id="@+id/group_member_item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_find_stuno_bg"
+            android:text="删除"
+            android:textSize="13sp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center" />
+	</RelativeLayout>
+</LinearLayout>

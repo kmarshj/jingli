@@ -61,6 +61,74 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name=".groups.ui.AddressActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.BaseManagerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.BaseSendLiveActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.CreateOrEditActivityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.CreateOrEditGroupActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.GroupHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.GroupMemberActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.SCPullDownRefreshActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.SendLiveImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.SendLiveTextActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.UploadActivityImgActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.UserHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.ActivityDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.ActivityListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.ActivityLiveActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.ActivityMainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.ActivityMemberActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name=".groups.ui.NewBaseActivity"
             android:screenOrientation="portrait" >
         </activity>
@@ -76,7 +144,6 @@
             android:name=".groups.ui.SCBaseActivity"
             android:screenOrientation="portrait" >
         </activity>
-        
         <activity
             android:name=".groups.ui.SetActivity"
             android:screenOrientation="portrait" >
