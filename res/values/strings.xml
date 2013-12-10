@@ -68,7 +68,7 @@
     <string name="organization">组织</string>
     <string name="picture_download_fail">图片下载超时，请点击重试</string>
     <string name="cancle">取消</string>
-    <string name="address_radiobutton_class">班级</string>
+    <string name="address_radiobutton_shop">店铺</string>
     <string name="confirm">确认</string>
     <string name="group_explanation">圈子说明</string>
     <string name="group_home_remark">圈子公告</string>
@@ -210,6 +210,7 @@
     <string name="statusbar_singleusermultimessagenotify">发来%1$d条消息</string>
     <string name="statusbar_singleuservoicenotify">%1$s发来一段语音</string>
     <string name="statusbar_singleusertextnotify">%1$s发来一条消息</string>
+    <string name="shops_title">掌上锦里</string>
     <string name="news">校园资讯</string>
     <string name="cet">四六级</string>
     <string name="result">查成绩</string>

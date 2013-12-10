@@ -10,18 +10,18 @@
 	    android:layout_height="@dimen/public_title_height"
 	    android:padding="@dimen/activity_news_title_padding"
 	    android:background="@drawable/public_title_bg">
-		<TextView android:id="@+id/address_title"
+		<TextView android:id="@+id/shops_title"
 		    style="@style/public_title_text"
-		    android:text="@string/address_list" />
+		    android:text="@string/shops_title" />
 		
-		<ImageView android:id="@+id/address_title_add"
+		<TextView android:id="@+id/shops_title_login"
 		    android:layout_width="wrap_content"
 		    android:layout_height="fill_parent"
 		    android:paddingLeft="@dimen/activity_news_title_menu_padding"
 		    android:paddingRight="@dimen/activity_news_title_menu_padding"
-		    android:src="@drawable/address_title_add"
-		    android:layout_alignParentRight="true"
-		    android:visibility="gone" />
+		    android:layout_alignParentLeft="true"
+		    android:text="@string/login"
+		     />
 	</RelativeLayout>
 
     <LinearLayout
@@ -80,27 +80,19 @@
 		    android:layout_weight="0"
 		    android:background="@drawable/address_search_right" />
     </LinearLayout>
-    
-    <RadioGroup android:id="@+id/address_radiogroup" 
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="horizontal" >
-	    <RadioButton android:id="@+id/address_radiobutton_shop"
-	        android:text="@string/address_radiobutton_shop"
-	        style="@style/address_radiobutton" />
-	    
-	    <RadioButton android:id="@+id/address_radiobutton_friend"
-	        style="@style/address_radiobutton"
-	        android:text="@string/address_radiobutton_friend" />
-	    
-<!-- 	    <RadioButton android:id="@+id/address_radiobutton_group"
-	        style="@style/address_radiobutton"
-	        android:text="@string/address_radiobutton_group" /> -->
-	</RadioGroup>
-    
-	<android.support.v4.view.ViewPager
-	    android:id="@+id/address_viewpager"
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    android:background="@android:color/white" />
+       <!-- 九宫格菜单 -->
+	<GridView
+	    android:id="@+id/gv_shops"
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	android:numColumns="3"
+	  	android:horizontalSpacing="10dip"
+	  	android:verticalSpacing="5dip"
+	  	android:stretchMode="columnWidth"
+	  	android:gravity="center"
+	  	android:layout_gravity="center_horizontal"
+	  	android:layout_marginTop="6dip"
+	  	android:fadingEdge="none"
+	  	/>  
+  
 </LinearLayout>

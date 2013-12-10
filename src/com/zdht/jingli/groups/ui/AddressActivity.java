@@ -68,20 +68,20 @@ public class AddressActivity extends NewBaseActivity implements
 	/** PagerAdapter */
 	private ViewPagerAdapter adapter;
 	
-	/** 班级列表 */
-	private PullToRefreshListView classListView;
-	/** 班级成员适配器 */
-	private AddressUserAdapter classAdapter;
+	/** 店铺列表 */
+	private PullToRefreshListView shopListView;
+	/** 店铺成员适配器 */
+	private AddressUserAdapter shopAdapter;
 
 	/** 好友列表 */
 	private PullToRefreshListView friendListView;
 	/** 好友列表成员适配器 */
 	private AddressUserAdapter friendAdapter;
 	
-	/** 圈子列表 */
-	private PullToRefreshListView groupListView;
-	/** 圈子列表成员适配器 */
-	private AddressGroupAdapter groupAdapter;
+//	/** 圈子列表 */
+//	private PullToRefreshListView groupListView;
+//	/** 圈子列表成员适配器 */
+//	private AddressGroupAdapter groupAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -119,26 +119,26 @@ public class AddressActivity extends NewBaseActivity implements
 	
 	
 	
-	public static void addOKGroup(Group group) {
-		// TODO 添加好友
-		if(instance != null) {
-			List<Group> groups = instance.groupAdapter.getmListObject();
-			if(groups == null || groups.size() == 0) {
-				instance.groupListView.startRun();
-			} else {
-				instance.groupAdapter.addItem(group);
-			}
-		}
-	}
+//	public static void addOKGroup(Group group) {
+//		// TODO 添加好友
+//		if(instance != null) {
+//			List<Group> groups = instance.groupAdapter.getmListObject();
+//			if(groups == null || groups.size() == 0) {
+//				instance.groupListView.startRun();
+//			} else {
+//				instance.groupAdapter.addItem(group);
+//			}
+//		}
+//	}
 	
 	private void init() {
 		mEditTextSearch = (AutoCompleteTextView)findViewById(R.id.address_search);
 		
 		navigation = (RadioGroup)findViewById(R.id.address_radiogroup);
 //		navigation.setOnCheckedChangeListener(this);
-		findViewById(R.id.address_radiobutton_class).setOnClickListener(this);
+		findViewById(R.id.address_radiobutton_shop).setOnClickListener(this);
 		findViewById(R.id.address_radiobutton_friend).setOnClickListener(this);
-		findViewById(R.id.address_radiobutton_group).setOnClickListener(this);
+	//	findViewById(R.id.address_radiobutton_group).setOnClickListener(this);
 		
 		viewPager = (ViewPager)findViewById(R.id.address_viewpager);
 		viewPager.setEnabled(false);
@@ -146,14 +146,14 @@ public class AddressActivity extends NewBaseActivity implements
 		List<View> viewList = new ArrayList<View>();
 		// 班级
 		LayoutInflater inflater = LayoutInflater.from(this);
-		classListView = (PullToRefreshListView)inflater.inflate(R.layout.refresh_listview, null);
-		classListView.setOnPullDownListener(this);
-		classListView.setTag(2);
-		classAdapter = new AddressUserAdapter(this);
-		classAdapter.setOnChildViewClickListener(this);
-		classListView.setAdapter(classAdapter);
-		classListView.setOnItemClickListener(this);
-		viewList.add(classListView);
+		shopListView = (PullToRefreshListView)inflater.inflate(R.layout.refresh_listview, null);
+		shopListView.setOnPullDownListener(this);
+		shopListView.setTag(2);
+		shopAdapter = new AddressUserAdapter(this);
+		shopAdapter.setOnChildViewClickListener(this);
+		shopListView.setAdapter(shopAdapter);
+		shopListView.setOnItemClickListener(this);
+		viewList.add(shopListView);
 		
 		// 好友
 		friendListView = (PullToRefreshListView)inflater.inflate(R.layout.refresh_listview, null);
@@ -167,21 +167,21 @@ public class AddressActivity extends NewBaseActivity implements
 		viewList.add(friendListView);
 
 		// 圈子
-		groupListView = (PullToRefreshListView)inflater.inflate(R.layout.refresh_listview, null);
-		groupListView.setOnPullDownListener(this);
-		groupListView.setTag(3);
-		groupAdapter = new AddressGroupAdapter(this);
-		groupListView.setAdapter(groupAdapter);
-		groupListView.setOnItemClickListener(this);
-		viewList.add(groupListView);
+//		groupListView = (PullToRefreshListView)inflater.inflate(R.layout.refresh_listview, null);
+//		groupListView.setOnPullDownListener(this);
+//		groupListView.setTag(3);
+//		groupAdapter = new AddressGroupAdapter(this);
+//		groupListView.setAdapter(groupAdapter);
+//		groupListView.setOnItemClickListener(this);
+//		viewList.add(groupListView);
 		
 		// 设置viewpager
 		adapter = new ViewPagerAdapter(viewList, null);
 		viewPager.setAdapter(adapter);
 		viewPager.setOnPageChangeListener(this);
 		
-		navigation.check(R.id.address_radiobutton_class);
-		classListView.startRun();
+		navigation.check(R.id.address_radiobutton_shop);
+		shopListView.startRun();
 		
 		// 清除匹配输入框内容
 		findViewById(R.id.address_clean).setOnClickListener(this);
@@ -226,11 +226,11 @@ public class AddressActivity extends NewBaseActivity implements
 		// TODO onPageSelected
 		switch(arg0) {
 		case 0:
-			if(navigation.getCheckedRadioButtonId() != R.id.address_radiobutton_class) {
-				navigation.check(R.id.address_radiobutton_class);
+			if(navigation.getCheckedRadioButtonId() != R.id.address_radiobutton_shop) {
+				navigation.check(R.id.address_radiobutton_shop);
 			}
-			if(classAdapter.getmListObject() == null || classAdapter.getmListObject().size() == 0) {
-				classListView.startRun();
+			if(shopAdapter.getmListObject() == null || shopAdapter.getmListObject().size() == 0) {
+				shopListView.startRun();
 			}
 			break;
 		case 1:
@@ -241,14 +241,14 @@ public class AddressActivity extends NewBaseActivity implements
 				friendListView.startRun();
 			}
 			break;
-		case 2:
-			if(navigation.getCheckedRadioButtonId() != R.id.address_radiobutton_group) {
-				navigation.check(R.id.address_radiobutton_group);
-			}
-			if(groupAdapter.getmListObject() == null || groupAdapter.getmListObject().size() == 0) {
-				groupListView.startRun();
-			}
-			break;
+//		case 2:
+//			if(navigation.getCheckedRadioButtonId() != R.id.address_radiobutton_group) {
+//				navigation.check(R.id.address_radiobutton_group);
+//			}
+//			if(groupAdapter.getmListObject() == null || groupAdapter.getmListObject().size() == 0) {
+//				groupListView.startRun();
+//			}
+//			break;
 		}
 	}
 	
@@ -279,7 +279,7 @@ public class AddressActivity extends NewBaseActivity implements
 		} else if(obj instanceof String) {
 			String username = (String)obj;
 			User mUser = null;
-			for(User user : classAdapter.getmListObject()) {
+			for(User user : shopAdapter.getmListObject()) {
 				if(user.getName().equals(username)) {
 					mUser = user;
 					break;
@@ -324,9 +324,9 @@ public class AddressActivity extends NewBaseActivity implements
 		if(nCode == EventCode.SC_DownloadImage){// 图片下载完成
 			DownloadEvent dEvent = (DownloadEvent)event;
 			if(dEvent.isSuccess()){
-				classAdapter.notifyDataSetChanged();
+				shopAdapter.notifyDataSetChanged();
 				friendAdapter.notifyDataSetChanged();
-				groupAdapter.notifyDataSetChanged();
+				//groupAdapter.notifyDataSetChanged();
 			}
 		} else if(nCode == EventCode.HTTPGET_GetAddressList) {
 			GetAddressListEvent getAddressListEvent = (GetAddressListEvent)event;
@@ -334,29 +334,29 @@ public class AddressActivity extends NewBaseActivity implements
 			System.out.println("onEventRunEnd：" + viewPager.getCurrentItem());
 			switch(type) {
 			case 2:
-				classListView.endRun();
+				shopListView.endRun();
 				break;
 			case 1:
 				friendListView.endRun();
 				break;
-			case 3:
-				groupListView.endRun();
-				break;
+//			case 3:
+//				groupListView.endRun();
+//				break;
 			}
 			if(getAddressListEvent.isRequestSuccess()) {
 				AddressList mAddressList = (AddressList)getAddressListEvent.getReturnParam();
 				switch(type) {
 				case 2:
-					classAdapter.replaceAll(mAddressList.getmListCLassFriend());
+					shopAdapter.replaceAll(mAddressList.getmListCLassFriend());
 					setAutoComplete();
 					break;
 				case 1:
 					friendAdapter.replaceAll(mAddressList.getListFriend());
 					setAutoComplete();
 					break;
-				case 3:
-					groupAdapter.replaceAll(mAddressList.getListGroup());
-					break;
+//				case 3:
+//					groupAdapter.replaceAll(mAddressList.getListGroup());
+//					break;
 				}
 			} else {
 				ToastManager.getInstance(this).show(getAddressListEvent.getmDescribe());
@@ -384,8 +384,8 @@ public class AddressActivity extends NewBaseActivity implements
 //		case R.id.address_title_add:
 //			startActivity(new Intent(this, AddFriendAndGroupActivity.class));
 //			break;
-		case R.id.address_radiobutton_class:
-			System.out.println("class");
+		case R.id.address_radiobutton_shop:
+			System.out.println("shop");
 			if(viewPager.getCurrentItem() != 0) {
 				viewPager.setCurrentItem(0);
 			}
@@ -396,12 +396,12 @@ public class AddressActivity extends NewBaseActivity implements
 				viewPager.setCurrentItem(1);
 			}
 			break;
-		case R.id.address_radiobutton_group:
-			System.out.println("group");
-			if(viewPager.getCurrentItem() != 2) {
-				viewPager.setCurrentItem(2);
-			}
-			break;
+//		case R.id.address_radiobutton_group:
+//			System.out.println("group");
+//			if(viewPager.getCurrentItem() != 2) {
+//				viewPager.setCurrentItem(2);
+//			}
+//			break;
 		}
 	}
 
@@ -439,11 +439,11 @@ public class AddressActivity extends NewBaseActivity implements
 	}
 	
 	private void setAutoComplete() {
-		// 班级同学或者好友存在时, 添加搜索匹配资源;
-		if(classAdapter.getmListObject().size() != 0 || friendAdapter.getmListObject().size() != 0) {
+		// 商铺或者好友存在时, 添加搜索匹配资源;
+		if(shopAdapter.getmListObject().size() != 0 || friendAdapter.getmListObject().size() != 0) {
 			// TODO AutoCompleteTextView
 			autoCompleteUser.clear();
-			for(User user : classAdapter.getmListObject()) {
+			for(User user : shopAdapter.getmListObject()) {
 				autoCompleteUser.add(user.getName());
 			}
 
