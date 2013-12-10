@@ -20,12 +20,14 @@ import com.zdht.jingli.R;
 import com.zdht.jingli.groups.AndroidEventManager;
 import com.zdht.jingli.groups.EventCode;
 import com.zdht.jingli.groups.FilePaths;
+import com.zdht.jingli.groups.SCApplication;
 import com.zdht.jingli.groups.event.DownloadEvent;
 import com.zdht.jingli.groups.event.PostFileEvent;
 import com.zdht.jingli.groups.localinfo.LocalInfoManager;
 import com.zdht.jingli.groups.model.Sex;
 import com.zdht.jingli.groups.model.UploadImage;
 import com.zdht.jingli.groups.provider.AvatarBmpProvider;
+import com.zdht.jingli.groups.utils.DialogUtils;
 import com.zdht.utils.FileHelper;
 import com.zdht.utils.SystemUtils;
 
@@ -48,9 +50,11 @@ public class PersonalInfoActivity extends SCBaseActivity implements OnClickListe
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		mImageViewAvatar = (ImageView)findViewById(R.id.ivMyAvatar);
+		mImageViewAvatar = (ImageView)findViewById(R.id.touxiang);
 		mImageViewAvatar.setOnClickListener(this);
 		addAndManageEventListener(EventCode.HTTPPOST_PostAvatar);
+		findViewById(R.id.btnLogin_out).setOnClickListener(this);
+		
 		findViewById(R.id.vPhone).setOnClickListener(this);
 		findViewById(R.id.vSignature).setOnClickListener(this);
 		findViewById(R.id.vPassword).setOnClickListener(this);
@@ -62,12 +66,12 @@ public class PersonalInfoActivity extends SCBaseActivity implements OnClickListe
 		mImageViewAvatar.setImageBitmap(SystemUtils.toRoundBitmap(AvatarBmpProvider.getInstance().loadImage(LocalInfoManager.getInstance().getAvatar())));
 		((TextView)findViewById(R.id.tvMy_name)).setText(LocalInfoManager.getInstance().getmLocalInfo().getRealName());
 		if(LocalInfoManager.getInstance().getmSex().equals(Sex.MALE)){
-			((TextView)findViewById(R.id.tvMy_sex)).setText(R.string.male);
+			((ImageView)findViewById(R.id.tvMy_sex)).setBackgroundResource(R.drawable.min);
 		}else {
-			((TextView)findViewById(R.id.tvMy_sex)).setText(R.string.female);
+			((ImageView)findViewById(R.id.tvMy_sex)).setBackgroundResource(R.drawable.min);
 		}
-		((TextView)findViewById(R.id.tvMy_faculties)).setText(LocalInfoManager.getInstance().getmFaculty());
-		((TextView)findViewById(R.id.tvMy_class)).setText(LocalInfoManager.getInstance().getmClass());
+//		((TextView)findViewById(R.id.tvMy_faculties)).setText(LocalInfoManager.getInstance().getmFaculty());
+//		((TextView)findViewById(R.id.tvMy_class)).setText(LocalInfoManager.getInstance().getmClass());
 		((TextView)findViewById(R.id.tvMy_phone)).setText(LocalInfoManager.getInstance().getmPhone());
 		((TextView)findViewById(R.id.tvMy_signature)).setText(LocalInfoManager.getInstance().getmSignature());
 	}
@@ -89,7 +93,7 @@ public class PersonalInfoActivity extends SCBaseActivity implements OnClickListe
 	public void onClick(View v) {
 		final int nId = v.getId();
 		
-		if(nId == R.id.ivMyAvatar){
+		if(nId == R.id.touxiang){
 			if(mDialogIdSetAvatar == 0){
 				mDialogIdSetAvatar = generateDialogId();
 			}
@@ -101,7 +105,7 @@ public class PersonalInfoActivity extends SCBaseActivity implements OnClickListe
 			if(mRequestCodeEditPhone == 0){
 				mRequestCodeEditPhone = generateRequestCode();
 			}
-			//EditPhoneActivity.launchForResult(this, mRequestCodeEditPhone, LocalInfoManager.getInstance().getmPhone());
+			EditPhoneActivity.launchForResult(this, mRequestCodeEditPhone, LocalInfoManager.getInstance().getmPhone());
 			return;
 		}
 		
@@ -109,12 +113,26 @@ public class PersonalInfoActivity extends SCBaseActivity implements OnClickListe
 			if(mRequestCodeEditSignature == 0){
 				mRequestCodeEditSignature = generateRequestCode();
 			}
-			//EditSignatureActivity.launchForResult(this, mRequestCodeEditSignature, LocalInfoManager.getInstance().getmSignature());
+			EditSignatureActivity.launchForResult(this, mRequestCodeEditSignature, LocalInfoManager.getInstance().getmSignature());
 			return;
 		}
 		
 		if(nId == R.id.vPassword){
-			//EditPasswordActivity.launch(this);
+			EditPasswordActivity.launch(this);
+			return;
+		}
+		
+		if(nId == R.id.btnLogin_out){
+			DialogUtils.showAlertDialog(this, R.string.set_logout_alert_title,
+					R.string.set_logout_alert_msg, new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							// TODO Auto-generated method stub
+
+							SCApplication.loginOut();
+							LoginActivity.launch(PersonalInfoActivity.this);
+						}
+					});
 			return;
 		}
 		

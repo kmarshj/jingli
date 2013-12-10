@@ -61,9 +61,9 @@ public class LocalInfoManager {
 	
 
 	public Sex getmSex() {
-//		if(mSex == null){
-//			mSex = Sex.valueOf(sp.getString(SharedPreferenceManager.KEY_SEX, ""));
-//		}
+		if(mSex == null){
+			mSex = Sex.valueOf(sp.getString(SharedPreferenceManager.KEY_SEX, ""));
+		}
 		return mSex;
 	}
 
