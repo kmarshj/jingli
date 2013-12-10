@@ -160,12 +160,12 @@ public class MainActivity extends ActivityGroup implements
 			}
 			break;
 		case 2:
-			if(views[2] == null) {
+//			if(views[2] == null) {
 //				intents = new Intent(context,
 //						ShoppingCartActivity.class);
 //				views[2] = getLocalActivityManager().startActivity(
 //						"shoppingcar", intents).getDecorView();
-			}
+//			}
 			break;
 		case 3:
 			if(views[3] == null) {
