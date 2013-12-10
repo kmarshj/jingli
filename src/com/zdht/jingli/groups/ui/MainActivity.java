@@ -162,7 +162,7 @@ public class MainActivity extends ActivityGroup implements
 		case 2:
 			if(views[2] == null) {
 				intents = new Intent(context,
-						LoginActivity.class);
+						AddressActivity.class);
 				views[2] = getLocalActivityManager().startActivity(
 						"shoppingcar", intents).getDecorView();
 			}
