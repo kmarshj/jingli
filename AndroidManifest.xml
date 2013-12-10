@@ -148,6 +148,31 @@
             android:name=".groups.ui.SetActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
+        <activity
+            android:name=".groups.ui.EditPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.FeedbackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.AboutUsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+         <activity
+            android:name=".groups.ui.EditSignatureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.EditPasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".groups.ui.ManagerActivitiesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>

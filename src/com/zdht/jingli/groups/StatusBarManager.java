@@ -119,6 +119,6 @@ public class StatusBarManager implements OnEventListener{
 	}
 	
 	public void clearStatusBar(){
-		mNotificationManager.cancel(NOTIFY_ID_SINGLECHAT);
+//		mNotificationManager.cancel(NOTIFY_ID_SINGLECHAT);
 	}
 }
