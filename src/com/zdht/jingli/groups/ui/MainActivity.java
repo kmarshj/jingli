@@ -8,16 +8,21 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 
+import com.zdht.core.Event;
+import com.zdht.core.EventManager.OnEventListener;
 import com.zdht.jingli.R;
+import com.zdht.jingli.groups.AndroidEventManager;
+import com.zdht.jingli.groups.EventCode;
 import com.zdht.jingli.groups.adapter.MainTabAdapter;
+import com.zdht.jingli.groups.localinfo.LocalInfoManager;
 
 /**
  * <主界面>
@@ -25,7 +30,7 @@ import com.zdht.jingli.groups.adapter.MainTabAdapter;
  * @author luchengsong
  */
 public class MainActivity extends ActivityGroup implements
-		OnItemClickListener {
+		OnItemClickListener , OnClickListener, OnEventListener{
 	/**
 	 * 底部标签图片适配器
 	 */
@@ -45,9 +50,13 @@ public class MainActivity extends ActivityGroup implements
 	 * 页面跳转
 	 */
 	private Intent intents;
-	private Window pageView = null;
 	
 	private View[] views = new View[5];
+	/** 当前的导航下标 */
+	private int currentItem;
+	
+	/** 请求登录视图 */
+	private View loginView;
 
 	/**
 	 * 初始标签图片的资源ID
@@ -75,7 +84,8 @@ public class MainActivity extends ActivityGroup implements
 		 * 设置监听事件
 		 */
 		setListener();
-
+		// 添加登录成功并完成所有相关操作的监听
+		AndroidEventManager.getInstance().addEventListener(EventCode.HP_LoginSuccessAndEnd, this, false);
 	}
 
 	private void initView(Bundle savedInstanceState) {
@@ -114,6 +124,12 @@ public class MainActivity extends ActivityGroup implements
 		 * 默认打开第0页
 		 */
 		switchPage(0);
+		createLoginView();
+	}
+	
+	private void createLoginView() {
+		loginView = getLayoutInflater().inflate(R.layout.activity_main_login, null);
+		loginView.findViewById(R.id.main_rl_login).setOnClickListener(this);
 	}
 
 	private void setListener() {
@@ -152,48 +168,59 @@ public class MainActivity extends ActivityGroup implements
 			}
 			break;
 		case 1:
-			if(views[1] == null) {
+			if(!LocalInfoManager.getInstance().isLogined()) {
+				// 未登录
+				views[id] = loginView;
+			} else if(views[id] == loginView || views[id] == null) {
 				intents = new Intent(context,
 						ChatListActivity.class);
-				views[1] = getLocalActivityManager().startActivity("chat",
+				views[id] = getLocalActivityManager().startActivity("chat",
 						intents).getDecorView();
 			}
 			break;
 		case 2:
-			if(views[2] == null) {
-				intents = new Intent(context,
-						AddressActivity.class);
-				views[2] = getLocalActivityManager().startActivity(
-						"shoppingcar", intents).getDecorView();
+			if(views[id] == null) {
+				views[id] = new View(this);
+//				intents = new Intent(context,
+//						ShoppingCartActivity.class);
+//				views[2] = getLocalActivityManager().startActivity(
+//						"shoppingcar", intents).getDecorView();
 			}
 			break;
 		case 3:
-			if(views[3] == null) {
-			intents = new Intent(context,
-					AddressActivity.class);
-			views[3] = getLocalActivityManager().startActivity("address",
-					intents).getDecorView();
+			if(!LocalInfoManager.getInstance().isLogined()) {
+				// 未登录
+				views[id] = loginView;
+			} else if(views[id] == loginView || views[id] == null) {
+				intents = new Intent(context,
+						AddressActivity.class);
+				views[id] = getLocalActivityManager().startActivity("address",
+						intents).getDecorView();
 			}
 			break;
 		case 4:
-			if(views[4] == null) {
-
+			if(!LocalInfoManager.getInstance().isLogined()) {
+				// 未登录
+				views[id] = loginView;
+			} else if(views[id] == loginView || views[id] == null) {
 				intents = new Intent(context,
 						SetActivity.class);
-				views[4] = getLocalActivityManager().startActivity("set",
+				views[id] = getLocalActivityManager().startActivity("set",
 						intents).getDecorView();
-
 			}
 			break;
 		default:
 			break;
 		}
-		intents.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//		intents.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+		currentItem = id;
 		/**
 		 * 装载子页面View到LinearLayout容器里面
 		 */
 		pageContainer.addView(views[id],
 				LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+		
+		
 	}
 
 
@@ -205,6 +232,25 @@ public class MainActivity extends ActivityGroup implements
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+	}
+
+	@Override
+	public void onClick(View arg0) {
+		// TODO onClick
+		switch(arg0.getId()) {
+		case R.id.main_rl_login:
+			LoginActivity.launch(this);
+			break;
+		}
+	}
+
+	@Override
+	public void onEventRunEnd(Event event) {
+		// TODO Auto-generated method stub
+		if(event.getEventCode() == EventCode.HP_LoginSuccessAndEnd) {
+			if(currentItem == 1 || currentItem == 3 || currentItem == 4)
+				switchPage(currentItem);
+		}
 	}
 
 

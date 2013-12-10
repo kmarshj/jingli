@@ -10,4 +10,5 @@
    	
    	<color name="activity_news_item_normal">#E0383C41</color>
    	<color name="activity_news_item_checked">#1EA580</color>
+   	<color name="red">#FF0000</color>
 </resources>

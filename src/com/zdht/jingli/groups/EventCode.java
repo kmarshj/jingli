@@ -108,6 +108,8 @@ public class EventCode{
 	
 	public static final int HP_LoginGetOrChangeInfoSuccess      = CODE_INC++;
 	
+	public static final int HP_LoginSuccessAndEnd      			= CODE_INC++;
+	
 	public static final int HP_UnreadMessageCountChanged		= CODE_INC++;
 	
 	public static final int DB_FacultyClassesStructureHandle    = CODE_INC++;
